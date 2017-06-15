@@ -1,0 +1,23 @@
+{
+  "name": "Classic Twitter UI",
+  "manifest_version": 2,
+  "version": "1.0",
+  "description": "Simply revert the new Twitter.com appearance.",
+  "author": "dangeredwolf",
+  "permissions": [
+    "https://www.twitter.com/",
+    "https://twitter.com/",
+    "http://www.twitter.com/",
+    "http://twitter.com/",
+    "tabs"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*","https://www.twitter.com/*","http://twitter.com/*","http://www.twitter.com/*"],
+      "js": ["extension/classictwitter.js"],
+      "run_at": "document_end"
+    }
+  ]
+
+}
