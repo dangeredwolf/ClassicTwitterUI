@@ -1,27 +1,12 @@
-function remove(){
+var w=window,d=document;
+
+function r(){
   setTimeout(function(){
-    document.body.classList.remove("edge-design");
-  },20);
+    d.body.classList.remove("edge-design");
+  });
 }
-remove();
+r();
 
-setTimeout(remove,20);
+w.addEventListener("popstate",r);
 
-window.addEventListener("hashchange", function(){
-  setTimeout(remove,20);
-});
-window.addEventListener("popstate", function(){
-  setTimeout(remove,20);
-});
-window.addEventListener("beforeunload", function() {
-  setTimeout(remove,20);
-});
-
-var observer = new MutationObserver(function(m) {
-    m.forEach(function(mutation) {
-        remove();
-    });
-});
-observer.observe(document.querySelector("body"),  {
-    attributes: true
-});
+(new MutationObserver(r)).observe(d.querySelector("body"),{attributes:1});
