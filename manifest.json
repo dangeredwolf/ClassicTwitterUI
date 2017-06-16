@@ -1,7 +1,7 @@
 {
   "name": "Classic Twitter UI",
   "manifest_version": 2,
-  "version": "1.01",
+  "version": "1.0.1",
   "description": "Simply revert the new Twitter.com appearance.",
   "author": "dangeredwolf",
   "permissions": [
